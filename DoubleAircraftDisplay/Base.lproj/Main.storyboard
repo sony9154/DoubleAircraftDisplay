@@ -97,7 +97,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="戰機總覽" id="Jp5-l2-L5x">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IFO-WB-aFT"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IFO-WB-aFT">
+                            <connections>
+                                <action selector="insertPlane:" destination="UKb-ha-g9o" id="zNL-Me-pAr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q9W-2x-YlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,7 +136,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="fighterTextField" destination="cGu-gL-Sdg" id="nW0-EK-jBL"/>
+                        <outlet property="fighterTextField" destination="cGu-gL-Sdg" id="e7H-Fg-rsb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCb-JA-ULv" userLabel="First Responder" sceneMemberID="firstResponder"/>

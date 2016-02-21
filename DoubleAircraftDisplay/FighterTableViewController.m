@@ -23,16 +23,21 @@
     self.fightersArray = [[NSMutableArray alloc] init];
     
     for (int i=0; i<5; i++) {
-        NSString * planeName = [NSString stringWithFormat: @"神人%i號" , i];
+        NSString * planeName = [NSString stringWithFormat: @"海燕%i號" , i];
         Fighter * fighter = [[Fighter alloc]init];
         [fighter setCodename:planeName];
         [self.fightersArray addObject:fighter];
     }
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateTableView) name:@"updateTableView" object:nil];
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+}
+
+-(void)updateTableView {
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,6 +71,37 @@
     Detail1ViewController * detail1VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Detail1ViewController"];
     detail1VC.fighter = fighter; //這裡的 detail1VC.fighter是跑到Detail1ViewController.h的第15行的*fighter去了嗎？
     [self.navigationController pushViewController:detail1VC animated:YES];
+}
+
+- (IBAction)insertPlane:(id)sender {
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"飛機資訊" message:@"請填入飛機代碼" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        [textField setPlaceholder:@"請在此填入代號"];
+    }];
+    [alertController addTextFieldWithConfigurationHandler: ^(UITextField * _Nonnull textField) {
+        [textField setPlaceholder:@"請填入飛行員名稱"];
+    }];
+    UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    
+    UIAlertAction * ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+        NSString * codeName = [[alertController textFields] firstObject].text;
+        NSString * pilotName = [[alertController textFields] lastObject].text;
+        
+        Fighter * fighter = [[Fighter alloc]init];
+        [fighter setCodename:codeName];
+        [fighter setPilotName:pilotName];
+        [self.fightersArray addObject:fighter];
+        [self.tableView reloadData];
+    }];
+    
+    
+    [alertController addAction:cancel];
+    [alertController addAction:ok];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"updateTableView" object:nil];
 }
 
 /*
