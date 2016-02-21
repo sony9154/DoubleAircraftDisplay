@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cna-qf-a2S">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7h-vl-6eT">
+                                <rect key="frame" x="225" y="485" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="bK4-GX-ar5"/>
+                                </constraints>
+                                <state key="normal" title="回上層"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAU-vs-mF3">
+                                <rect key="frame" x="279" y="164" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6t-cm-quu">
+                                <rect key="frame" x="225" y="420" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="aIX-Vu-BRk"/>
+                                </constraints>
+                                <state key="normal" title="觀看所有戰機代號"/>
+                                <connections>
+                                    <segue destination="UKb-ha-g9o" kind="show" id="Y6t-TC-x5H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q6t-cm-quu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bhl-h9-KkL"/>
+                            <constraint firstItem="pAU-vs-mF3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="Cst-R8-eut"/>
+                            <constraint firstItem="D7h-vl-6eT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OCf-4E-a7n"/>
+                            <constraint firstItem="pAU-vs-mF3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TFZ-Y5-mgo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Q6t-cm-quu" secondAttribute="bottom" constant="150" id="uID-yD-0Ux"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D7h-vl-6eT" secondAttribute="bottom" constant="85" id="zE3-SS-axG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8RZ-wu-DTu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272" y="399"/>
+        </scene>
+        <!--戰機總覽-->
+        <scene sceneID="KDI-lh-40H">
+            <objects>
+                <tableViewController id="UKb-ha-g9o" customClass="FighterTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="1HG-kg-SWa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="y7l-xx-sXV" detailTextLabel="OKI-V2-es6" style="IBUITableViewCellStyleSubtitle" id="mhQ-6B-EZ1">
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mhQ-6B-EZ1" id="ffb-eR-R1A">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y7l-xx-sXV">
+                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OKI-V2-es6">
+                                            <rect key="frame" x="15" y="25.5" width="30.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UKb-ha-g9o" id="9Ej-bp-zyc"/>
+                            <outlet property="delegate" destination="UKb-ha-g9o" id="F0D-Ak-RNq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="戰機總覽" id="Jp5-l2-L5x">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IFO-WB-aFT"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q9W-2x-YlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960" y="389"/>
+        </scene>
+        <!--Detail1 View Controller-->
+        <scene sceneID="m5p-M9-XYP">
+            <objects>
+                <viewController storyboardIdentifier="Detail1ViewController" id="h70-kP-qeW" customClass="Detail1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ifn-Al-iag"/>
+                        <viewControllerLayoutGuide type="bottom" id="RgP-gz-z3c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F8k-6O-5LG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="修改戰機資訊" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGu-gL-Sdg">
+                                <rect key="frame" x="225.5" y="285" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="75b-bk-IAh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cGu-gL-Sdg" firstAttribute="centerX" secondItem="F8k-6O-5LG" secondAttribute="centerX" id="tKv-3q-rVB"/>
+                            <constraint firstItem="cGu-gL-Sdg" firstAttribute="centerY" secondItem="F8k-6O-5LG" secondAttribute="centerY" id="v2f-DT-QRe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fighterTextField" destination="cGu-gL-Sdg" id="nW0-EK-jBL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCb-JA-ULv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2604" y="389"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Ov-Nb-ShM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cna-qf-a2S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="frw-iO-rhJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UKU-b0-Znz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdC-DA-uiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="-293"/>
+        </scene>
+    </scenes>
+</document>

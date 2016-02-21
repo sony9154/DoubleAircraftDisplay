@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D06B3151C79688400663BB9 /* FighterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06B3141C79688400663BB9 /* FighterTableViewController.m */; };
+		5D06B3181C79692D00663BB9 /* Detail1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06B3171C79692D00663BB9 /* Detail1ViewController.m */; };
+		5D06B3211C79711F00663BB9 /* Aircraft.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06B31C1C79711F00663BB9 /* Aircraft.m */; };
+		5D06B3221C79711F00663BB9 /* Airline.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06B31E1C79711F00663BB9 /* Airline.m */; };
+		5D06B3231C79711F00663BB9 /* Fighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06B3201C79711F00663BB9 /* Fighter.m */; };
+		5DDA7E8B1C747956009B21BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA7E8A1C747956009B21BA /* main.m */; };
+		5DDA7E8E1C747956009B21BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA7E8D1C747956009B21BA /* AppDelegate.m */; };
+		5DDA7E911C747956009B21BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA7E901C747956009B21BA /* ViewController.m */; };
+		5DDA7E941C747956009B21BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDA7E921C747956009B21BA /* Main.storyboard */; };
+		5DDA7E961C747956009B21BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DDA7E951C747956009B21BA /* Assets.xcassets */; };
+		5DDA7E991C747956009B21BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDA7E971C747956009B21BA /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D06B3131C79688400663BB9 /* FighterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FighterTableViewController.h; sourceTree = "<group>"; };
+		5D06B3141C79688400663BB9 /* FighterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FighterTableViewController.m; sourceTree = "<group>"; };
+		5D06B3161C79692D00663BB9 /* Detail1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Detail1ViewController.h; sourceTree = "<group>"; };
+		5D06B3171C79692D00663BB9 /* Detail1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Detail1ViewController.m; sourceTree = "<group>"; };
+		5D06B31B1C79711F00663BB9 /* Aircraft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Aircraft.h; path = Library/Aircraft.h; sourceTree = "<group>"; };
+		5D06B31C1C79711F00663BB9 /* Aircraft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Aircraft.m; path = Library/Aircraft.m; sourceTree = "<group>"; };
+		5D06B31D1C79711F00663BB9 /* Airline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Airline.h; path = Library/Airline.h; sourceTree = "<group>"; };
+		5D06B31E1C79711F00663BB9 /* Airline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Airline.m; path = Library/Airline.m; sourceTree = "<group>"; };
+		5D06B31F1C79711F00663BB9 /* Fighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fighter.h; path = Library/Fighter.h; sourceTree = "<group>"; };
+		5D06B3201C79711F00663BB9 /* Fighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fighter.m; path = Library/Fighter.m; sourceTree = "<group>"; };
+		5DDA7E861C747956009B21BA /* DoubleAircraftDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleAircraftDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DDA7E8A1C747956009B21BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5DDA7E8C1C747956009B21BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5DDA7E8D1C747956009B21BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5DDA7E8F1C747956009B21BA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5DDA7E901C747956009B21BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5DDA7E931C747956009B21BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DDA7E951C747956009B21BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DDA7E981C747956009B21BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DDA7E9A1C747956009B21BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DDA7E831C747956009B21BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DDA7E7D1C747956009B21BA = {
+			isa = PBXGroup;
+			children = (
+				5DDA7E881C747956009B21BA /* DoubleAircraftDisplay */,
+				5DDA7E871C747956009B21BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5DDA7E871C747956009B21BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DDA7E861C747956009B21BA /* DoubleAircraftDisplay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DDA7E881C747956009B21BA /* DoubleAircraftDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				5D06B31B1C79711F00663BB9 /* Aircraft.h */,
+				5D06B31C1C79711F00663BB9 /* Aircraft.m */,
+				5D06B31D1C79711F00663BB9 /* Airline.h */,
+				5D06B31E1C79711F00663BB9 /* Airline.m */,
+				5D06B31F1C79711F00663BB9 /* Fighter.h */,
+				5D06B3201C79711F00663BB9 /* Fighter.m */,
+				5DDA7E8C1C747956009B21BA /* AppDelegate.h */,
+				5DDA7E8D1C747956009B21BA /* AppDelegate.m */,
+				5DDA7E8F1C747956009B21BA /* ViewController.h */,
+				5D06B3131C79688400663BB9 /* FighterTableViewController.h */,
+				5D06B3141C79688400663BB9 /* FighterTableViewController.m */,
+				5D06B3161C79692D00663BB9 /* Detail1ViewController.h */,
+				5D06B3171C79692D00663BB9 /* Detail1ViewController.m */,
+				5DDA7E901C747956009B21BA /* ViewController.m */,
+				5DDA7E921C747956009B21BA /* Main.storyboard */,
+				5DDA7E951C747956009B21BA /* Assets.xcassets */,
+				5DDA7E971C747956009B21BA /* LaunchScreen.storyboard */,
+				5DDA7E9A1C747956009B21BA /* Info.plist */,
+				5DDA7E891C747956009B21BA /* Supporting Files */,
+			);
+			path = DoubleAircraftDisplay;
+			sourceTree = "<group>";
+		};
+		5DDA7E891C747956009B21BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DDA7E8A1C747956009B21BA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DDA7E851C747956009B21BA /* DoubleAircraftDisplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DDA7E9D1C747956009B21BA /* Build configuration list for PBXNativeTarget "DoubleAircraftDisplay" */;
+			buildPhases = (
+				5DDA7E821C747956009B21BA /* Sources */,
+				5DDA7E831C747956009B21BA /* Frameworks */,
+				5DDA7E841C747956009B21BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoubleAircraftDisplay;
+			productName = DoubleAircraftDisplay;
+			productReference = 5DDA7E861C747956009B21BA /* DoubleAircraftDisplay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DDA7E7E1C747956009B21BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Song-Yo Hsu";
+				TargetAttributes = {
+					5DDA7E851C747956009B21BA = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 2SD55ZZB3A;
+					};
+				};
+			};
+			buildConfigurationList = 5DDA7E811C747956009B21BA /* Build configuration list for PBXProject "DoubleAircraftDisplay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DDA7E7D1C747956009B21BA;
+			productRefGroup = 5DDA7E871C747956009B21BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DDA7E851C747956009B21BA /* DoubleAircraftDisplay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DDA7E841C747956009B21BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DDA7E991C747956009B21BA /* LaunchScreen.storyboard in Resources */,
+				5DDA7E961C747956009B21BA /* Assets.xcassets in Resources */,
+				5DDA7E941C747956009B21BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DDA7E821C747956009B21BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DDA7E911C747956009B21BA /* ViewController.m in Sources */,
+				5DDA7E8E1C747956009B21BA /* AppDelegate.m in Sources */,
+				5D06B3221C79711F00663BB9 /* Airline.m in Sources */,
+				5DDA7E8B1C747956009B21BA /* main.m in Sources */,
+				5D06B3211C79711F00663BB9 /* Aircraft.m in Sources */,
+				5D06B3231C79711F00663BB9 /* Fighter.m in Sources */,
+				5D06B3151C79688400663BB9 /* FighterTableViewController.m in Sources */,
+				5D06B3181C79692D00663BB9 /* Detail1ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5DDA7E921C747956009B21BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DDA7E931C747956009B21BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5DDA7E971C747956009B21BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DDA7E981C747956009B21BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DDA7E9B1C747956009B21BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5DDA7E9C1C747956009B21BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DDA7E9E1C747956009B21BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DoubleAircraftDisplay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.soyo.DoubleAircraftDisplay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5DDA7E9F1C747956009B21BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DoubleAircraftDisplay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.soyo.DoubleAircraftDisplay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DDA7E811C747956009B21BA /* Build configuration list for PBXProject "DoubleAircraftDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DDA7E9B1C747956009B21BA /* Debug */,
+				5DDA7E9C1C747956009B21BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DDA7E9D1C747956009B21BA /* Build configuration list for PBXNativeTarget "DoubleAircraftDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DDA7E9E1C747956009B21BA /* Debug */,
+				5DDA7E9F1C747956009B21BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DDA7E7E1C747956009B21BA /* Project object */;
+}
