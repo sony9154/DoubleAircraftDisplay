@@ -52,6 +52,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8RZ-wu-DTu"/>
+                    <connections>
+                        <outlet property="totalFighterTextLabel" destination="pAU-vs-mF3" id="8W9-vo-JqC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

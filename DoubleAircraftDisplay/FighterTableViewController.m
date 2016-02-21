@@ -10,7 +10,7 @@
 #import "Detail1ViewController.h"
 #import "Fighter.h"
 
-@interface FighterTableViewController ()
+@interface FighterTableViewController ()<UITableViewDelegate>
 @property (nonatomic,strong) NSMutableArray * fightersArray;
 
 @end
@@ -30,7 +30,8 @@
     }
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateTableView) name:@"updateTableView" object:nil];
-
+    
+    self.tableView.delegate = self;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     

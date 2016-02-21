@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FighterTableViewController.h"
 
 @interface ViewController : UIViewController
 
