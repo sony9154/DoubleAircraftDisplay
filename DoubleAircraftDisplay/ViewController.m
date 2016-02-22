@@ -21,7 +21,7 @@
     //[self.fighterAmount intValue];
     //NSLog(@"%li",self.fightersArray.count);
     self.totalFighterTextLabel.text = [NSString stringWithFormat:@"目前有%li架戰機", self.vcFightersArray.count]; //為什麼這裡收不到值???
-}
+}//已找到解答,是我vcFightersArray沒初始化
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
