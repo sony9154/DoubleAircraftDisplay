@@ -9,9 +9,10 @@
 #import "FighterTableViewController.h"
 #import "Detail1ViewController.h"
 #import "Fighter.h"
+#import "ViewController.h"
 
-@interface FighterTableViewController ()<UITableViewDelegate>
-@property (nonatomic,strong) NSMutableArray * fightersArray;
+@interface FighterTableViewController ()
+
 
 @end
 
@@ -27,9 +28,11 @@
         Fighter * fighter = [[Fighter alloc]init];
         [fighter setCodename:planeName];
         [self.fightersArray addObject:fighter];
+        NSLog(@"目前有%li架戰機",self.fightersArray.count);
     }
-    
+
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateTableView) name:@"updateTableView" object:nil];
+    
     
     self.tableView.delegate = self;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -93,6 +96,7 @@
         [fighter setPilotName:pilotName];
         [self.fightersArray addObject:fighter];
         [self.tableView reloadData];
+        NSLog(@"目前有%li架戰機",self.fightersArray.count);
     }];
     
     
