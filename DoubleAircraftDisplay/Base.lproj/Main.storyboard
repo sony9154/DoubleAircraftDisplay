@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cna-qf-a2S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DjQ-yf-uOE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,9 +24,12 @@
                                     <constraint firstAttribute="width" constant="150" id="bK4-GX-ar5"/>
                                 </constraints>
                                 <state key="normal" title="回上層"/>
+                                <connections>
+                                    <action selector="goBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VZ9-pc-NPa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAU-vs-mF3">
-                                <rect key="frame" x="279" y="164" width="42" height="20.5"/>
+                                <rect key="frame" x="275" y="164" width="50" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -162,7 +166,56 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdC-DA-uiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464" y="-293"/>
+            <point key="canvasLocation" x="998" y="-361"/>
+        </scene>
+        <!--Both Aircraft View Controller-->
+        <scene sceneID="2RS-Lq-HPg">
+            <objects>
+                <viewController id="DjQ-yf-uOE" customClass="BothAircraftViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jSY-qx-Fjz"/>
+                        <viewControllerLayoutGuide type="bottom" id="V9a-74-idI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="waM-3Y-0gn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKY-48-mHb">
+                                <rect key="frame" x="270" y="240" width="60" height="30"/>
+                                <state key="normal" title="戰機一覽"/>
+                                <connections>
+                                    <segue destination="cna-qf-a2S" kind="show" identifier="segueToViewController" id="3vs-HX-CuJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPQ-fN-hs3">
+                                <rect key="frame" x="270" y="350" width="60" height="30"/>
+                                <state key="normal" title="客機一覽"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFG-ff-jKc">
+                                <rect key="frame" x="30" y="70" width="540" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rFG-ff-jKc" secondAttribute="trailing" constant="10" id="EiA-wT-kDE"/>
+                            <constraint firstItem="rFG-ff-jKc" firstAttribute="top" secondItem="jSY-qx-Fjz" secondAttribute="bottom" constant="50" id="R2s-HC-GYa"/>
+                            <constraint firstItem="V9a-74-idI" firstAttribute="top" secondItem="JPQ-fN-hs3" secondAttribute="bottom" constant="220" id="RPO-XF-1pf"/>
+                            <constraint firstItem="HKY-48-mHb" firstAttribute="top" secondItem="jSY-qx-Fjz" secondAttribute="bottom" constant="220" id="jtK-d9-nOd"/>
+                            <constraint firstItem="HKY-48-mHb" firstAttribute="centerX" secondItem="waM-3Y-0gn" secondAttribute="centerX" id="oUp-AK-nV0"/>
+                            <constraint firstItem="rFG-ff-jKc" firstAttribute="leading" secondItem="waM-3Y-0gn" secondAttribute="leadingMargin" constant="10" id="p5Q-nM-wDf"/>
+                            <constraint firstItem="JPQ-fN-hs3" firstAttribute="centerX" secondItem="waM-3Y-0gn" secondAttribute="centerX" id="rDO-1L-vhB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bothAircraftLabel" destination="rFG-ff-jKc" id="yLT-lL-J43"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgj-Ey-36h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="345" y="363"/>
         </scene>
     </scenes>
 </document>

@@ -11,7 +11,6 @@
 
 @interface ViewController : UIViewController
 
-//@property (nonatomic) NSInteger * fighterAmount;
 @property (nonatomic,strong) NSMutableArray * vcFightersArray;
 
 @end

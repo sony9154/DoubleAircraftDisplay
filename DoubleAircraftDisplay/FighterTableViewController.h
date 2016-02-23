@@ -11,7 +11,6 @@
 
 @interface FighterTableViewController : UITableViewController
 
-//@property (nonatomic) NSInteger * fighterAmount;
 //@property(nonatomic,strong) Fighter * fighter;
 @property (nonatomic,strong) NSMutableArray * fightersArray;
 
