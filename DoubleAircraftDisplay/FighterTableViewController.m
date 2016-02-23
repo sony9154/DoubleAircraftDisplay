@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.fightersArray = [[NSMutableArray alloc] init];
+    //self.fightersArray = [[NSMutableArray alloc] init];
     
 //    for (int i=0; i<5; i++) {
 //        NSString * planeName = [NSString stringWithFormat: @"海燕%i號" , i];
@@ -96,7 +96,7 @@
         [fighter setPilotName:pilotName];
         [self.fightersArray addObject:fighter];
         [self.tableView reloadData];
-        //NSLog(@"目前有%li架戰機",self.fightersArray.count);
+        NSLog(@"目前有%li架戰機",self.fightersArray.count);
     }];
     
     

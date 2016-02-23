@@ -18,9 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    //self.vcFightersArray = [[NSMutableArray alloc]init];
-    
+    self.vcFightersArray = [[NSMutableArray alloc]init];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -41,7 +39,7 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    //NSLog(@"目前有%li架戰機", self.vcFightersArray.count);
+    NSLog(@"目前ViewController.m有%li架戰機", self.vcFightersArray.count);
 }
 
 

@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1272" y="399"/>
+            <point key="canvasLocation" x="1298" y="399"/>
         </scene>
         <!--戰機總覽-->
         <scene sceneID="KDI-lh-40H">
@@ -113,7 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q9W-2x-YlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1960" y="389"/>
+            <point key="canvasLocation" x="1990" y="399"/>
         </scene>
         <!--Detail1 View Controller-->
         <scene sceneID="m5p-M9-XYP">
@@ -148,12 +148,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCb-JA-ULv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604" y="389"/>
+            <point key="canvasLocation" x="2640" y="389"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--My Navigation Controller-->
         <scene sceneID="1Ov-Nb-ShM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cna-qf-a2S" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cna-qf-a2S" customClass="MyNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="frw-iO-rhJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -166,7 +166,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdC-DA-uiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="-361"/>
+            <point key="canvasLocation" x="596" y="399"/>
         </scene>
         <!--Both Aircraft View Controller-->
         <scene sceneID="2RS-Lq-HPg">
@@ -215,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgj-Ey-36h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="345" y="363"/>
+            <point key="canvasLocation" x="-113" y="399"/>
         </scene>
     </scenes>
 </document>

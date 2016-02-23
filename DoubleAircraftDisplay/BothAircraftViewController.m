@@ -8,6 +8,7 @@
 
 #import "BothAircraftViewController.h"
 #import "ViewController.h"
+#import "MyNavigationController.h"
 
 @interface BothAircraftViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *bothAircraftLabel;
@@ -30,8 +31,11 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"segueToViewController"]) {
-        ViewController * viewcontroller = segue.destinationViewController;
-       viewcontroller.vcFightersArray = self.totalAircraftArray;
+        
+        MyNavigationController * myNavigationController = segue.destinationViewController;
+        myNavigationController.vcFightersArray = self.totalAircraftArray;
+        ViewController * viewController ;
+        viewController.vcFightersArray  = myNavigationController.vcFightersArray;
     }
 }
 

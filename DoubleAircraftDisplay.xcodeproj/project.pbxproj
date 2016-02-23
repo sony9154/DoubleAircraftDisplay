@@ -12,6 +12,7 @@
 		5D06B3211C79711F00663BB9 /* Aircraft.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06B31C1C79711F00663BB9 /* Aircraft.m */; };
 		5D06B3221C79711F00663BB9 /* Airline.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06B31E1C79711F00663BB9 /* Airline.m */; };
 		5D06B3231C79711F00663BB9 /* Fighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06B3201C79711F00663BB9 /* Fighter.m */; };
+		5D0879B81C7C73EA00E12C8C /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0879B71C7C73EA00E12C8C /* MyNavigationController.m */; };
 		5D51EB2E1C7B4D890090EC5C /* BothAircraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D51EB2D1C7B4D890090EC5C /* BothAircraftViewController.m */; };
 		5DDA7E8B1C747956009B21BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA7E8A1C747956009B21BA /* main.m */; };
 		5DDA7E8E1C747956009B21BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA7E8D1C747956009B21BA /* AppDelegate.m */; };
@@ -32,6 +33,8 @@
 		5D06B31E1C79711F00663BB9 /* Airline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Airline.m; path = Library/Airline.m; sourceTree = "<group>"; };
 		5D06B31F1C79711F00663BB9 /* Fighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fighter.h; path = Library/Fighter.h; sourceTree = "<group>"; };
 		5D06B3201C79711F00663BB9 /* Fighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fighter.m; path = Library/Fighter.m; sourceTree = "<group>"; };
+		5D0879B61C7C73EA00E12C8C /* MyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
+		5D0879B71C7C73EA00E12C8C /* MyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
 		5D51EB2C1C7B4D890090EC5C /* BothAircraftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BothAircraftViewController.h; sourceTree = "<group>"; };
 		5D51EB2D1C7B4D890090EC5C /* BothAircraftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BothAircraftViewController.m; sourceTree = "<group>"; };
 		5DDA7E861C747956009B21BA /* DoubleAircraftDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleAircraftDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,15 +87,17 @@
 				5D06B3201C79711F00663BB9 /* Fighter.m */,
 				5DDA7E8C1C747956009B21BA /* AppDelegate.h */,
 				5DDA7E8D1C747956009B21BA /* AppDelegate.m */,
+				5DDA7E921C747956009B21BA /* Main.storyboard */,
+				5D51EB2C1C7B4D890090EC5C /* BothAircraftViewController.h */,
+				5D51EB2D1C7B4D890090EC5C /* BothAircraftViewController.m */,
+				5D0879B61C7C73EA00E12C8C /* MyNavigationController.h */,
+				5D0879B71C7C73EA00E12C8C /* MyNavigationController.m */,
 				5DDA7E8F1C747956009B21BA /* ViewController.h */,
 				5DDA7E901C747956009B21BA /* ViewController.m */,
 				5D06B3131C79688400663BB9 /* FighterTableViewController.h */,
 				5D06B3141C79688400663BB9 /* FighterTableViewController.m */,
 				5D06B3161C79692D00663BB9 /* Detail1ViewController.h */,
 				5D06B3171C79692D00663BB9 /* Detail1ViewController.m */,
-				5DDA7E921C747956009B21BA /* Main.storyboard */,
-				5D51EB2C1C7B4D890090EC5C /* BothAircraftViewController.h */,
-				5D51EB2D1C7B4D890090EC5C /* BothAircraftViewController.m */,
 				5DDA7E951C747956009B21BA /* Assets.xcassets */,
 				5DDA7E971C747956009B21BA /* LaunchScreen.storyboard */,
 				5DDA7E9A1C747956009B21BA /* Info.plist */,
@@ -189,6 +194,7 @@
 				5D06B3231C79711F00663BB9 /* Fighter.m in Sources */,
 				5D06B3151C79688400663BB9 /* FighterTableViewController.m in Sources */,
 				5D06B3181C79692D00663BB9 /* Detail1ViewController.m in Sources */,
+				5D0879B81C7C73EA00E12C8C /* MyNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
