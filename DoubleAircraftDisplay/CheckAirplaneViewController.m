@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
     self.totalAirplaneLabel.text = [NSString stringWithFormat:@"目前有%li架客機",self.airplanesArray.count];
 }
 

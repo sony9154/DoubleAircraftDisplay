@@ -11,6 +11,8 @@
 #import "CheckAirplaneViewController.h"
 #import "MyNavigationController-1.h"
 #import "MyNavigationController-2.h"
+#import "Fighter.h"
+#import "Airline.h"
 
 @interface BothAircraftViewController ()
 @property (nonatomic,strong) NSMutableArray * fightersArray;
@@ -24,12 +26,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.fightersArray = [[NSMutableArray alloc]init];
+    self.fightersArray = [NSMutableArray new];
+    self.airplanesArray = [NSMutableArray new];
     
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    self.bothAircraftLabel.text = [NSString stringWithFormat:@"總共有%li架飛機", self.fightersArray.count];
+    self.bothAircraftLabel.text = [NSString stringWithFormat:@"總共有%li架飛機", (self.fightersArray.count + self.airplanesArray.count)];
 }
 
 

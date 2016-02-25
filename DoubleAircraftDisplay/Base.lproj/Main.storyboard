@@ -28,8 +28,12 @@
                                     <action selector="goBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VZ9-pc-NPa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAU-vs-mF3">
-                                <rect key="frame" x="270" y="164" width="55" height="25.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAU-vs-mF3">
+                                <rect key="frame" x="270" y="164" width="55" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="Hzt-Ok-LtV"/>
+                                    <constraint firstAttribute="height" constant="26" id="m61-dh-hJB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -47,10 +51,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pAU-vs-mF3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="270" id="97C-Et-zEV"/>
+                            <constraint firstItem="pAU-vs-mF3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ALn-nY-6xx"/>
                             <constraint firstItem="Q6t-cm-quu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bhl-h9-KkL"/>
-                            <constraint firstItem="pAU-vs-mF3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="Cst-R8-eut"/>
                             <constraint firstItem="D7h-vl-6eT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OCf-4E-a7n"/>
-                            <constraint firstItem="pAU-vs-mF3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-2.5" id="TFZ-Y5-mgo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Q6t-cm-quu" secondAttribute="bottom" constant="150" id="uID-yD-0Ux"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D7h-vl-6eT" secondAttribute="bottom" constant="85" id="zE3-SS-axG"/>
                         </constraints>
@@ -96,7 +100,7 @@
                                     <action selector="goBackButton:" destination="J6b-XU-p5k" eventType="touchUpInside" id="xpr-Kw-jdy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB8-Cc-vW3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB8-Cc-vW3">
                                 <rect key="frame" x="279" y="154" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -197,6 +201,9 @@
                             <constraint firstItem="grb-E8-N9J" firstAttribute="centerX" secondItem="hUj-wm-fSp" secondAttribute="centerX" id="y0v-6e-Bi5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="airlineTextField" destination="grb-E8-N9J" id="SiD-qs-gD8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w0G-fe-0ES" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -380,8 +387,12 @@
                                     <action selector="goBackButton:" destination="qso-on-kOV" eventType="touchUpInside" id="Smi-N4-Bto"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceM-n1-myV">
-                                <rect key="frame" x="270" y="164" width="55" height="25.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceM-n1-myV">
+                                <rect key="frame" x="270" y="164" width="55" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="Dxq-7p-rRx"/>
+                                    <constraint firstAttribute="height" constant="26" id="wWv-Gm-laM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -398,9 +409,9 @@
                         <constraints>
                             <constraint firstItem="uYG-4H-at7" firstAttribute="top" secondItem="xPH-pj-IpZ" secondAttribute="bottom" constant="150" id="1AO-SM-dBK"/>
                             <constraint firstItem="uYG-4H-at7" firstAttribute="top" secondItem="Imv-zv-gQX" secondAttribute="bottom" constant="85" id="1yi-qN-nyV"/>
-                            <constraint firstItem="ceM-n1-myV" firstAttribute="centerX" secondItem="qrI-ho-Sj7" secondAttribute="centerX" constant="-2.5" id="7Hy-AI-8qw"/>
+                            <constraint firstItem="ceM-n1-myV" firstAttribute="top" secondItem="eGP-QB-p7o" secondAttribute="bottom" constant="144" id="5Ps-ah-Eox"/>
                             <constraint firstItem="xPH-pj-IpZ" firstAttribute="centerX" secondItem="qrI-ho-Sj7" secondAttribute="centerX" id="84z-Tt-mm9"/>
-                            <constraint firstItem="ceM-n1-myV" firstAttribute="top" secondItem="eGP-QB-p7o" secondAttribute="bottom" constant="100" id="LIX-cJ-59T"/>
+                            <constraint firstItem="ceM-n1-myV" firstAttribute="leading" secondItem="qrI-ho-Sj7" secondAttribute="leading" constant="270" id="JrL-dk-Avy"/>
                             <constraint firstItem="Imv-zv-gQX" firstAttribute="centerX" secondItem="qrI-ho-Sj7" secondAttribute="centerX" id="u0S-ax-H27"/>
                         </constraints>
                     </view>

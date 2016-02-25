@@ -8,7 +8,8 @@
 
 #import "Detail2ViewController.h"
 
-@interface Detail2ViewController ()
+@interface Detail2ViewController ()<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *airlineTextField;
 
 @end
 
@@ -16,12 +17,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.airlineTextField.text = [self.airline tellMeCodename];
+    
+    self.airlineTextField.delegate = self;
+
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    [self.airline setCodename:self.airlineTextField.text];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"updateTableView" object:nil];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.airlineTextField resignFirstResponder];
 }
 
 /*
