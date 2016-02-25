@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MyNavigationController : UINavigationController
-@property (nonatomic,strong) NSMutableArray *vcFightersArray;
+@property (nonatomic,strong) NSMutableArray *fightersArray;
 @end

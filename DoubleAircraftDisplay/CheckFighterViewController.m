@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Song-Yo Hsu. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CheckFighterViewController.h"
 #import "FighterTableViewController.h"
 
 @interface ViewController ()
@@ -20,7 +20,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    self.totalFighterTextLabel.text = [NSString stringWithFormat:@"目前有%li架戰機", self.vcFightersArray.count];
+    self.totalFighterTextLabel.text = [NSString stringWithFormat:@"目前有%li架戰機", self.fightersArray.count];
 }
 
 
@@ -28,7 +28,7 @@
 {
     if ([segue.identifier isEqualToString:@"segueToFighterTable"]) {
         FighterTableViewController * fighterTVC = segue.destinationViewController;
-        fighterTVC.fightersArray = self.vcFightersArray;
+        fighterTVC.fightersArray = self.fightersArray;
 
     }
 }
@@ -36,8 +36,7 @@
 - (IBAction)goBackButton:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-    NSLog(@"目前ViewController.m有%li架戰機", self.vcFightersArray.count);
+
 }
 
 

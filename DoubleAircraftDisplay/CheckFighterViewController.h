@@ -11,7 +11,7 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic,strong) NSMutableArray * vcFightersArray;
+@property (nonatomic,strong) NSMutableArray * fightersArray;
 
 @end
 

@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAU-vs-mF3">
-                                <rect key="frame" x="275" y="164" width="50" height="20.5"/>
+                                <rect key="frame" x="270" y="164" width="55" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                             <constraint firstItem="Q6t-cm-quu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bhl-h9-KkL"/>
                             <constraint firstItem="pAU-vs-mF3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="Cst-R8-eut"/>
                             <constraint firstItem="D7h-vl-6eT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OCf-4E-a7n"/>
-                            <constraint firstItem="pAU-vs-mF3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TFZ-Y5-mgo"/>
+                            <constraint firstItem="pAU-vs-mF3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-2.5" id="TFZ-Y5-mgo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Q6t-cm-quu" secondAttribute="bottom" constant="150" id="uID-yD-0Ux"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D7h-vl-6eT" secondAttribute="bottom" constant="85" id="zE3-SS-axG"/>
                         </constraints>
@@ -62,7 +62,145 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298" y="399"/>
+            <point key="canvasLocation" x="1284" y="233"/>
+        </scene>
+        <!--Check Airplane View Controller-->
+        <scene sceneID="AvM-4d-xN4">
+            <objects>
+                <viewController id="J6b-XU-p5k" customClass="CheckAirplaneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XRw-6A-y3K"/>
+                        <viewControllerLayoutGuide type="bottom" id="IMY-wA-Gd1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="na2-SL-eBg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOu-MT-m6A">
+                                <rect key="frame" x="225" y="396" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="pv9-Id-vNH"/>
+                                </constraints>
+                                <state key="normal" title="觀看所有客機代號"/>
+                                <connections>
+                                    <segue destination="1cf-z5-aE3" kind="show" identifier="segueToAirplaneTable" id="Wcu-v1-i3o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozZ-WV-4QU">
+                                <rect key="frame" x="225" y="485" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="S55-y5-xii"/>
+                                </constraints>
+                                <state key="normal" title="回上層"/>
+                                <connections>
+                                    <action selector="goBackButton:" destination="J6b-XU-p5k" eventType="touchUpInside" id="xpr-Kw-jdy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB8-Cc-vW3">
+                                <rect key="frame" x="279" y="154" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eB8-Cc-vW3" firstAttribute="top" secondItem="XRw-6A-y3K" secondAttribute="bottom" constant="90" id="Hrw-iC-3vk"/>
+                            <constraint firstItem="IMY-wA-Gd1" firstAttribute="top" secondItem="ozZ-WV-4QU" secondAttribute="bottom" constant="85" id="T4S-SW-fKy"/>
+                            <constraint firstItem="EOu-MT-m6A" firstAttribute="centerX" secondItem="na2-SL-eBg" secondAttribute="centerX" id="Z8j-9o-Gl2"/>
+                            <constraint firstItem="eB8-Cc-vW3" firstAttribute="centerX" secondItem="na2-SL-eBg" secondAttribute="centerX" id="gns-eJ-eCM"/>
+                            <constraint firstItem="ozZ-WV-4QU" firstAttribute="top" secondItem="EOu-MT-m6A" secondAttribute="bottom" constant="59" id="pYB-55-w95"/>
+                            <constraint firstItem="ozZ-WV-4QU" firstAttribute="centerX" secondItem="na2-SL-eBg" secondAttribute="centerX" id="qFM-y4-v3T"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="v8F-SP-MZ4"/>
+                    <connections>
+                        <outlet property="totalAirplaneLabel" destination="eB8-Cc-vW3" id="pMW-kF-tBd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2m-gC-7kF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284" y="1081"/>
+        </scene>
+        <!--客機總覽-->
+        <scene sceneID="KUZ-G6-zce">
+            <objects>
+                <tableViewController id="1cf-z5-aE3" customClass="AirplaneTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="NpZ-p5-Dr2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Ly5-1H-Exg" detailTextLabel="U4L-e0-4eW" style="IBUITableViewCellStyleSubtitle" id="ssc-5h-bFV">
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ssc-5h-bFV" id="xbt-UH-dc6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ly5-1H-Exg">
+                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U4L-e0-4eW">
+                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1cf-z5-aE3" id="oyG-ii-hZC"/>
+                            <outlet property="delegate" destination="1cf-z5-aE3" id="KlU-dU-67N"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="客機總覽" id="Agq-gM-Ow8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TK7-91-QF1">
+                            <connections>
+                                <action selector="insertPlane:" destination="1cf-z5-aE3" id="Mtx-GN-xUN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FzF-ZX-Epx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1976" y="1081"/>
+        </scene>
+        <!--Detail2 View Controller-->
+        <scene sceneID="ec3-sp-XXV">
+            <objects>
+                <viewController storyboardIdentifier="Detail2ViewController" id="i7y-Lu-HbZ" customClass="Detail2ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lgt-1Q-mcM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pnu-8A-2hD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hUj-wm-fSp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="修改客機資訊" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="grb-E8-N9J">
+                                <rect key="frame" x="247.5" y="285" width="105" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="grb-E8-N9J" firstAttribute="centerY" secondItem="hUj-wm-fSp" secondAttribute="centerY" id="jbb-Dh-Z06"/>
+                            <constraint firstItem="grb-E8-N9J" firstAttribute="centerX" secondItem="hUj-wm-fSp" secondAttribute="centerX" id="y0v-6e-Bi5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w0G-fe-0ES" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2650" y="1086"/>
         </scene>
         <!--戰機總覽-->
         <scene sceneID="KDI-lh-40H">
@@ -113,7 +251,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q9W-2x-YlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1990" y="399"/>
+            <point key="canvasLocation" x="1966" y="233"/>
         </scene>
         <!--Detail1 View Controller-->
         <scene sceneID="m5p-M9-XYP">
@@ -148,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCb-JA-ULv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2640" y="389"/>
+            <point key="canvasLocation" x="2650" y="233"/>
         </scene>
         <!--My Navigation Controller-->
         <scene sceneID="1Ov-Nb-ShM">
@@ -166,7 +304,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdC-DA-uiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="596" y="399"/>
+            <point key="canvasLocation" x="602" y="233"/>
         </scene>
         <!--Both Aircraft View Controller-->
         <scene sceneID="2RS-Lq-HPg">
@@ -184,14 +322,17 @@
                                 <rect key="frame" x="270" y="240" width="60" height="30"/>
                                 <state key="normal" title="戰機一覽"/>
                                 <connections>
-                                    <segue destination="cna-qf-a2S" kind="show" identifier="segueToViewController" id="3vs-HX-CuJ"/>
+                                    <segue destination="cna-qf-a2S" kind="show" identifier="segueToNavigationController1" id="3vs-HX-CuJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPQ-fN-hs3">
                                 <rect key="frame" x="270" y="350" width="60" height="30"/>
                                 <state key="normal" title="客機一覽"/>
+                                <connections>
+                                    <segue destination="MjX-Ut-Xve" kind="show" identifier="segueToNavigationController2" id="UAe-ms-KkC"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFG-ff-jKc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFG-ff-jKc">
                                 <rect key="frame" x="30" y="70" width="540" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -215,7 +356,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgj-Ey-36h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="399"/>
+            <point key="canvasLocation" x="-227" y="671"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4v5-jl-AUp">
+            <objects>
+                <viewController id="qso-on-kOV" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eGP-QB-p7o"/>
+                        <viewControllerLayoutGuide type="bottom" id="uYG-4H-at7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qrI-ho-Sj7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imv-zv-gQX">
+                                <rect key="frame" x="225" y="485" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="N2A-lm-mVf"/>
+                                </constraints>
+                                <state key="normal" title="回上層"/>
+                                <connections>
+                                    <action selector="goBackButton:" destination="qso-on-kOV" eventType="touchUpInside" id="Smi-N4-Bto"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceM-n1-myV">
+                                <rect key="frame" x="270" y="164" width="55" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPH-pj-IpZ">
+                                <rect key="frame" x="225" y="420" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="NnP-9l-Ylf"/>
+                                </constraints>
+                                <state key="normal" title="觀看所有戰機代號"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uYG-4H-at7" firstAttribute="top" secondItem="xPH-pj-IpZ" secondAttribute="bottom" constant="150" id="1AO-SM-dBK"/>
+                            <constraint firstItem="uYG-4H-at7" firstAttribute="top" secondItem="Imv-zv-gQX" secondAttribute="bottom" constant="85" id="1yi-qN-nyV"/>
+                            <constraint firstItem="ceM-n1-myV" firstAttribute="centerX" secondItem="qrI-ho-Sj7" secondAttribute="centerX" constant="-2.5" id="7Hy-AI-8qw"/>
+                            <constraint firstItem="xPH-pj-IpZ" firstAttribute="centerX" secondItem="qrI-ho-Sj7" secondAttribute="centerX" id="84z-Tt-mm9"/>
+                            <constraint firstItem="ceM-n1-myV" firstAttribute="top" secondItem="eGP-QB-p7o" secondAttribute="bottom" constant="100" id="LIX-cJ-59T"/>
+                            <constraint firstItem="Imv-zv-gQX" firstAttribute="centerX" secondItem="qrI-ho-Sj7" secondAttribute="centerX" id="u0S-ax-H27"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Um-NV-qdF"/>
+                    <connections>
+                        <outlet property="totalFighterTextLabel" destination="ceM-n1-myV" id="NsW-5l-W4a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FB-of-neJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284" y="233"/>
+        </scene>
+        <!--My Navigation Controller2-->
+        <scene sceneID="ciq-rr-OL7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MjX-Ut-Xve" customClass="MyNavigationController_2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QHl-A6-VdZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J6b-XU-p5k" kind="relationship" relationship="rootViewController" id="Fgw-zV-QQ7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEm-10-ew2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="1081"/>
         </scene>
     </scenes>
 </document>

@@ -1,33 +1,23 @@
 //
-//  MyNavigationController.m
+//  MyNavigationController-2.m
 //  DoubleAircraftDisplay
 //
-//  Created by Peter Yo on 2月/23/16.
+//  Created by Peter Yo on 2月/25/16.
 //  Copyright © 2016年 Song-Yo Hsu. All rights reserved.
 //
 
-#import "MyNavigationController.h"
-#import "ViewController.h"
+#import "MyNavigationController-2.h"
 
-@interface MyNavigationController ()
+@interface MyNavigationController_2 ()
 
 @end
 
-@implementation MyNavigationController
+@implementation MyNavigationController_2
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //NSLog(@"目前MyNavigationController.m有%li架戰機", self.vcFightersArray.count);
     // Do any additional setup after loading the view.
 }
-
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([segue.identifier isEqualToString:@"????"]) {
-//        ViewController * viewController = segue.destinationViewController;
-//        viewController.vcFightersArray = self.vcFightersArray;
-//    }
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
