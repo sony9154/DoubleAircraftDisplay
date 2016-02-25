@@ -10,6 +10,5 @@
 
 @interface BothAircraftViewController : UIViewController
 
-@property (nonatomic,strong) NSMutableArray * totalAircraftArray;
 
 @end

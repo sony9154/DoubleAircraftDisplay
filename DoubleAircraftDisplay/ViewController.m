@@ -11,14 +11,12 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *totalFighterTextLabel;
-
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.vcFightersArray = [[NSMutableArray alloc]init];
 }
 
 -(void)viewDidAppear:(BOOL)animated {

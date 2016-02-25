@@ -11,6 +11,7 @@
 #import "MyNavigationController.h"
 
 @interface BothAircraftViewController ()
+@property (nonatomic,strong) NSMutableArray * totalAircraftArray;
 @property (weak, nonatomic) IBOutlet UILabel *bothAircraftLabel;
 
 @end
@@ -33,9 +34,7 @@
     if ([segue.identifier isEqualToString:@"segueToViewController"]) {
         
         MyNavigationController * myNavigationController = segue.destinationViewController;
-        myNavigationController.vcFightersArray = self.totalAircraftArray;
-        ViewController * viewController ;
-        viewController.vcFightersArray  = myNavigationController.vcFightersArray;
+        ((ViewController *)myNavigationController.viewControllers[0]).vcFightersArray = self.totalAircraftArray;//viewControllers的類型是UIViewController,因為vcFightersArray是寫在ViewController下,所以要轉型成ViewController.
     }
 }
 
