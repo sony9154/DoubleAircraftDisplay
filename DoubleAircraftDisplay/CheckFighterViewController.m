@@ -9,11 +9,11 @@
 #import "CheckFighterViewController.h"
 #import "FighterTableViewController.h"
 
-@interface ViewController ()
+@interface CheckFighterViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *totalFighterTextLabel;
 @end
 
-@implementation ViewController
+@implementation CheckFighterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

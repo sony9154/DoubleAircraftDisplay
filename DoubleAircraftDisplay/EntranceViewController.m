@@ -9,7 +9,7 @@
 #import "EntranceViewController.h"
 #import "CheckFighterViewController.h"
 #import "CheckAirplaneViewController.h"
-#import "MyNavigationController-1.h"
+#import "MyNavigationController.h"
 #import "MyNavigationController-2.h"
 #import "Fighter.h"
 #import "Airline.h"
@@ -40,7 +40,7 @@
     if ([segue.identifier isEqualToString:@"segueToNavigationController1"]) {
         
         MyNavigationController * myNavigationController1 = segue.destinationViewController;
-        ((ViewController *)myNavigationController1.viewControllers[0]).fightersArray = self.fightersArray;//viewControllers的類型是UIViewController,因為fightersArray是寫在ViewController下,所以要轉型成ViewController.
+        ((CheckFighterViewController *)myNavigationController1.viewControllers[0]).fightersArray = self.fightersArray;//viewControllers的類型是UIViewController,因為fightersArray是寫在ViewController下,所以要轉型成ViewController.
     }else if([segue.identifier isEqualToString:@"segueToNavigationController2"]){
         
         MyNavigationController_2 * myNavigationController2 = segue.destinationViewController;

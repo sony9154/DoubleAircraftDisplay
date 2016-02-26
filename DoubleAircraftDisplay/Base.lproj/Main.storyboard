@@ -44,9 +44,6 @@
                                     <constraint firstAttribute="width" constant="150" id="aIX-Vu-BRk"/>
                                 </constraints>
                                 <state key="normal" title="觀看所有戰機代號"/>
-                                <connections>
-                                    <segue destination="UKb-ha-g9o" kind="show" identifier="segueToFighterTable" id="Y6t-TC-x5H"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -100,8 +97,11 @@
                                     <action selector="goBackButton:" destination="J6b-XU-p5k" eventType="touchUpInside" id="xpr-Kw-jdy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB8-Cc-vW3">
-                                <rect key="frame" x="279" y="154" width="42" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB8-Cc-vW3">
+                                <rect key="frame" x="70" y="114" width="460" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="dfj-0i-FUz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -109,12 +109,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eB8-Cc-vW3" firstAttribute="top" secondItem="XRw-6A-y3K" secondAttribute="bottom" constant="90" id="Hrw-iC-3vk"/>
+                            <constraint firstItem="eB8-Cc-vW3" firstAttribute="leading" secondItem="na2-SL-eBg" secondAttribute="leadingMargin" constant="50" id="BH7-k7-Nbb"/>
+                            <constraint firstItem="eB8-Cc-vW3" firstAttribute="top" secondItem="XRw-6A-y3K" secondAttribute="bottom" constant="50" id="M2u-b4-9rD"/>
                             <constraint firstItem="IMY-wA-Gd1" firstAttribute="top" secondItem="ozZ-WV-4QU" secondAttribute="bottom" constant="85" id="T4S-SW-fKy"/>
                             <constraint firstItem="EOu-MT-m6A" firstAttribute="centerX" secondItem="na2-SL-eBg" secondAttribute="centerX" id="Z8j-9o-Gl2"/>
-                            <constraint firstItem="eB8-Cc-vW3" firstAttribute="centerX" secondItem="na2-SL-eBg" secondAttribute="centerX" id="gns-eJ-eCM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eB8-Cc-vW3" secondAttribute="trailing" constant="50" id="Zi8-gB-Ed8"/>
                             <constraint firstItem="ozZ-WV-4QU" firstAttribute="top" secondItem="EOu-MT-m6A" secondAttribute="bottom" constant="59" id="pYB-55-w95"/>
                             <constraint firstItem="ozZ-WV-4QU" firstAttribute="centerX" secondItem="na2-SL-eBg" secondAttribute="centerX" id="qFM-y4-v3T"/>
+                            <constraint firstItem="eB8-Cc-vW3" firstAttribute="centerX" secondItem="na2-SL-eBg" secondAttribute="centerX" id="xZn-pG-BGQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="v8F-SP-MZ4"/>
@@ -306,7 +308,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UKU-b0-Znz"/>
+                        <segue destination="qso-on-kOV" kind="relationship" relationship="rootViewController" id="USb-03-2vJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdC-DA-uiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -365,10 +367,10 @@
             </objects>
             <point key="canvasLocation" x="-227" y="671"/>
         </scene>
-        <!--View Controller-->
+        <!--Check Fighter View Controller-->
         <scene sceneID="4v5-jl-AUp">
             <objects>
-                <viewController id="qso-on-kOV" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="qso-on-kOV" customClass="CheckFighterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eGP-QB-p7o"/>
                         <viewControllerLayoutGuide type="bottom" id="uYG-4H-at7"/>
@@ -387,11 +389,10 @@
                                     <action selector="goBackButton:" destination="qso-on-kOV" eventType="touchUpInside" id="Smi-N4-Bto"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceM-n1-myV">
-                                <rect key="frame" x="270" y="164" width="55" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceM-n1-myV">
+                                <rect key="frame" x="70" y="114" width="460" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="Dxq-7p-rRx"/>
-                                    <constraint firstAttribute="height" constant="26" id="wWv-Gm-laM"/>
+                                    <constraint firstAttribute="height" constant="21" id="7Ee-ZD-i65"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -403,21 +404,25 @@
                                     <constraint firstAttribute="width" constant="150" id="NnP-9l-Ylf"/>
                                 </constraints>
                                 <state key="normal" title="觀看所有戰機代號"/>
+                                <connections>
+                                    <segue destination="UKb-ha-g9o" kind="show" identifier="segueToFighterTable" id="2cg-38-FJG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uYG-4H-at7" firstAttribute="top" secondItem="xPH-pj-IpZ" secondAttribute="bottom" constant="150" id="1AO-SM-dBK"/>
                             <constraint firstItem="uYG-4H-at7" firstAttribute="top" secondItem="Imv-zv-gQX" secondAttribute="bottom" constant="85" id="1yi-qN-nyV"/>
-                            <constraint firstItem="ceM-n1-myV" firstAttribute="top" secondItem="eGP-QB-p7o" secondAttribute="bottom" constant="144" id="5Ps-ah-Eox"/>
                             <constraint firstItem="xPH-pj-IpZ" firstAttribute="centerX" secondItem="qrI-ho-Sj7" secondAttribute="centerX" id="84z-Tt-mm9"/>
-                            <constraint firstItem="ceM-n1-myV" firstAttribute="leading" secondItem="qrI-ho-Sj7" secondAttribute="leading" constant="270" id="JrL-dk-Avy"/>
+                            <constraint firstItem="ceM-n1-myV" firstAttribute="top" secondItem="eGP-QB-p7o" secondAttribute="bottom" constant="50" id="ND0-2t-jUa"/>
+                            <constraint firstItem="ceM-n1-myV" firstAttribute="centerX" secondItem="xPH-pj-IpZ" secondAttribute="centerX" id="UKV-gS-Pq7"/>
+                            <constraint firstItem="ceM-n1-myV" firstAttribute="leading" secondItem="qrI-ho-Sj7" secondAttribute="leadingMargin" constant="50" id="p8J-yv-YMc"/>
                             <constraint firstItem="Imv-zv-gQX" firstAttribute="centerX" secondItem="qrI-ho-Sj7" secondAttribute="centerX" id="u0S-ax-H27"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Um-NV-qdF"/>
                     <connections>
-                        <outlet property="totalFighterTextLabel" destination="ceM-n1-myV" id="NsW-5l-W4a"/>
+                        <outlet property="totalFighterTextLabel" destination="ceM-n1-myV" id="fXJ-nW-zjo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1FB-of-neJ" sceneMemberID="firstResponder"/>

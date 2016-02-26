@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FighterTableViewController.h"
 
-@interface ViewController : UIViewController
+@interface CheckFighterViewController : UIViewController
 
 @property (nonatomic,strong) NSMutableArray * fightersArray;
 

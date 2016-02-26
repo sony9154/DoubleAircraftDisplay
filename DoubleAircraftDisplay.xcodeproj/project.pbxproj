@@ -12,7 +12,7 @@
 		5D06B3211C79711F00663BB9 /* Aircraft.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06B31C1C79711F00663BB9 /* Aircraft.m */; };
 		5D06B3221C79711F00663BB9 /* Airline.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06B31E1C79711F00663BB9 /* Airline.m */; };
 		5D06B3231C79711F00663BB9 /* Fighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06B3201C79711F00663BB9 /* Fighter.m */; };
-		5D0879B81C7C73EA00E12C8C /* MyNavigationController-1.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0879B71C7C73EA00E12C8C /* MyNavigationController-1.m */; };
+		5D0879B81C7C73EA00E12C8C /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0879B71C7C73EA00E12C8C /* MyNavigationController.m */; };
 		5D51EB2E1C7B4D890090EC5C /* EntranceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D51EB2D1C7B4D890090EC5C /* EntranceViewController.m */; };
 		5DB71D441C7F29E0005C81E7 /* CheckAirplaneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB71D431C7F29E0005C81E7 /* CheckAirplaneViewController.m */; };
 		5DB71D471C7F2C70005C81E7 /* AirplaneTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB71D461C7F2C70005C81E7 /* AirplaneTableViewController.m */; };
@@ -37,8 +37,8 @@
 		5D06B31E1C79711F00663BB9 /* Airline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Airline.m; path = Library/Airline.m; sourceTree = "<group>"; };
 		5D06B31F1C79711F00663BB9 /* Fighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fighter.h; path = Library/Fighter.h; sourceTree = "<group>"; };
 		5D06B3201C79711F00663BB9 /* Fighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fighter.m; path = Library/Fighter.m; sourceTree = "<group>"; };
-		5D0879B61C7C73EA00E12C8C /* MyNavigationController-1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyNavigationController-1.h"; sourceTree = "<group>"; };
-		5D0879B71C7C73EA00E12C8C /* MyNavigationController-1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyNavigationController-1.m"; sourceTree = "<group>"; };
+		5D0879B61C7C73EA00E12C8C /* MyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
+		5D0879B71C7C73EA00E12C8C /* MyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
 		5D51EB2C1C7B4D890090EC5C /* EntranceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntranceViewController.h; sourceTree = "<group>"; };
 		5D51EB2D1C7B4D890090EC5C /* EntranceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntranceViewController.m; sourceTree = "<group>"; };
 		5DB71D421C7F29E0005C81E7 /* CheckAirplaneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckAirplaneViewController.h; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 				5DDA7E921C747956009B21BA /* Main.storyboard */,
 				5D51EB2C1C7B4D890090EC5C /* EntranceViewController.h */,
 				5D51EB2D1C7B4D890090EC5C /* EntranceViewController.m */,
-				5D0879B61C7C73EA00E12C8C /* MyNavigationController-1.h */,
-				5D0879B71C7C73EA00E12C8C /* MyNavigationController-1.m */,
+				5D0879B61C7C73EA00E12C8C /* MyNavigationController.h */,
+				5D0879B71C7C73EA00E12C8C /* MyNavigationController.m */,
 				5DDA7E8F1C747956009B21BA /* CheckFighterViewController.h */,
 				5DDA7E901C747956009B21BA /* CheckFighterViewController.m */,
 				5D06B3131C79688400663BB9 /* FighterTableViewController.h */,
@@ -218,7 +218,7 @@
 				5D06B3231C79711F00663BB9 /* Fighter.m in Sources */,
 				5D06B3151C79688400663BB9 /* FighterTableViewController.m in Sources */,
 				5D06B3181C79692D00663BB9 /* Detail1ViewController.m in Sources */,
-				5D0879B81C7C73EA00E12C8C /* MyNavigationController-1.m in Sources */,
+				5D0879B81C7C73EA00E12C8C /* MyNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Song-Yo Hsu. All rights reserved.
 //
 
-#import "MyNavigationController-1.h"
+#import "MyNavigationController.h"
 #import "CheckFighterViewController.h"
 
 @interface MyNavigationController ()
