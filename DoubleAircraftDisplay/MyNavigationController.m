@@ -7,7 +7,6 @@
 //
 
 #import "MyNavigationController.h"
-#import "CheckFighterViewController.h"
 
 @interface MyNavigationController ()
 

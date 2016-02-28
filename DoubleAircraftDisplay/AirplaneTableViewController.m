@@ -10,9 +10,10 @@
 #import "Airline.h"
 #import "Detail2ViewController.h"
 #import "CheckAirplaneViewController.h"
+#import "AirplainManager.h"
 
 @interface AirplaneTableViewController ()
-
+@property (nonatomic) NSMutableArray<Airline *> *airlines;
 @end
 
 @implementation AirplaneTableViewController
@@ -22,6 +23,8 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateTableView) name:@"updateTableView" object:nil];
 
     self.tableView.delegate = self;
+    AirplainManager *airplainManager = [AirplainManager sharedInstance];
+    self.airlines = airplainManager.airlines;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,20 +49,20 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.airplanesArray.count;
+    return self.airlines.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    Airline * airplane = [self.airplanesArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = [airplane tellMeCodename];
-    cell.detailTextLabel.text = [airplane pilotName];
+    Airline * airline = [self.airlines objectAtIndex:indexPath.row];
+    cell.textLabel.text = [airline tellMeCodename];
+    cell.detailTextLabel.text = [airline pilotName];
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    Airline * airline = [self.airplanesArray objectAtIndex:indexPath.row];
+    Airline * airline = [self.airlines objectAtIndex:indexPath.row];
     Detail2ViewController * detail2VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Detail2ViewController"];
     detail2VC.airline = airline;
     [self.navigationController pushViewController:detail2VC animated:YES];
@@ -82,9 +85,9 @@
         Airline * airplane = [[Airline alloc]init];
         [airplane setCodename:codeName];
         [airplane setPilotName:pilotName];
-        [self.airplanesArray addObject:airplane];
+        [self.airlines addObject:airplane];
         [self.tableView reloadData];
-        NSLog(@"目前有%li架客機",self.airplanesArray.count);
+        NSLog(@"目前有%li架客機",self.airlines.count);
     }];
     
     

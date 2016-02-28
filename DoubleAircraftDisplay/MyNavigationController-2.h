@@ -9,5 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface MyNavigationController_2 : UINavigationController
-@property (nonatomic,strong) NSMutableArray * airplanesArray;
 @end

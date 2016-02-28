@@ -7,11 +7,10 @@
 //
 
 #import "CheckAirplaneViewController.h"
-#import "AirplaneTableViewController.h"
+#import "AirplainManager.h"
 
 @interface CheckAirplaneViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *totalAirplaneLabel;
-
 @end
 
 @implementation CheckAirplaneViewController
@@ -22,14 +21,8 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    self.totalAirplaneLabel.text = [NSString stringWithFormat:@"目前有%li架客機",self.airplanesArray.count];
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"segueToAirplaneTable"]) {
-        AirplaneTableViewController * airplaneTVC = segue.destinationViewController;
-        airplaneTVC.airplanesArray = self.airplanesArray;
-    }
+    AirplainManager *airplainManager = [AirplainManager sharedInstance];
+    self.totalAirplaneLabel.text = [NSString stringWithFormat:@"目前有%li架客機", airplainManager.airlines.count];
 }
 
 - (IBAction)goBackButton:(id)sender {

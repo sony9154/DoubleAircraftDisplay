@@ -10,31 +10,23 @@
 #import "Detail1ViewController.h"
 #import "Fighter.h"
 #import "CheckFighterViewController.h"
+#import "AirplainManager.h"
+#import "Detail1ViewController.h"
 
 @interface FighterTableViewController ()
-
-
+@property (nonatomic) NSMutableArray<Fighter *> *fighters;
 @end
 
 @implementation FighterTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //self.fightersArray = [[NSMutableArray alloc] init];
-    
-//    for (int i=0; i<5; i++) {
-//        NSString * planeName = [NSString stringWithFormat: @"海燕%i號" , i];
-//        Fighter * fighter = [[Fighter alloc]init];
-//        [fighter setCodename:planeName];
-//        [self.fightersArray addObject:fighter];
-//    }
-    //NSLog(@"目前有%li架戰機",self.fightersArray.count);
-
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateTableView) name:@"updateTableView" object:nil];
     
-    
     self.tableView.delegate = self;
+    AirplainManager *airplainManager = [AirplainManager sharedInstance];
+    self.fighters = airplainManager.fighters;
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
@@ -56,14 +48,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.fightersArray.count;
+    return self.fighters.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    Fighter * fighter = [self.fightersArray objectAtIndex:indexPath.row];
+    Fighter *fighter = [self.fighters objectAtIndex:indexPath.row];
     cell.textLabel.text = [fighter tellMeCodename];
     cell.detailTextLabel.text = [fighter pilotName];
     return cell;
@@ -71,7 +62,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    Fighter * fighter = [self.fightersArray objectAtIndex:indexPath.row];
+    Fighter * fighter = [self.fighters objectAtIndex:indexPath.row];
     Detail1ViewController * detail1VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Detail1ViewController"];
     detail1VC.fighter = fighter; //這裡的 detail1VC.fighter是跑到Detail1ViewController.h的第15行的*fighter去了嗎？
     [self.navigationController pushViewController:detail1VC animated:YES];
@@ -94,9 +85,9 @@
         Fighter * fighter = [[Fighter alloc]init];
         [fighter setCodename:codeName];
         [fighter setPilotName:pilotName];
-        [self.fightersArray addObject:fighter];
+        [self.fighters addObject:fighter];
         [self.tableView reloadData];
-        NSLog(@"目前有%li架戰機",self.fightersArray.count);
+        NSLog(@"目前有%li架戰機",self.fighters.count);
     }];
     
     

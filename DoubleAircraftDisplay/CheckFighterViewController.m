@@ -7,7 +7,7 @@
 //
 
 #import "CheckFighterViewController.h"
-#import "FighterTableViewController.h"
+#import "AirplainManager.h"
 
 @interface CheckFighterViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *totalFighterTextLabel;
@@ -20,26 +20,14 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    self.totalFighterTextLabel.text = [NSString stringWithFormat:@"目前有%li架戰機", self.fightersArray.count];
-}
-
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"segueToFighterTable"]) {
-        FighterTableViewController * fighterTVC = segue.destinationViewController;
-        fighterTVC.fightersArray = self.fightersArray;
-
-    }
+    AirplainManager *airplainManager = [AirplainManager sharedInstance];
+    self.totalFighterTextLabel.text = [NSString stringWithFormat:@"目前有%li架戰機", airplainManager.fighters.count];
 }
 
 - (IBAction)goBackButton:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
-
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

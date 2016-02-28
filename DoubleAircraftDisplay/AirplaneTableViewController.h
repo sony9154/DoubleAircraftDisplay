@@ -9,6 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface AirplaneTableViewController : UITableViewController
-@property (nonatomic,strong) NSMutableArray * airplanesArray;
-
 @end

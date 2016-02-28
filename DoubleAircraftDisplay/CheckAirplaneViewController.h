@@ -10,7 +10,4 @@
 #import "CheckAirplaneViewController.h"
 
 @interface CheckAirplaneViewController : UIViewController
-
-@property (nonatomic,strong) NSMutableArray * airplanesArray;
-
 @end

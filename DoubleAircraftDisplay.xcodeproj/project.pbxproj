@@ -24,6 +24,7 @@
 		5DDA7E941C747956009B21BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDA7E921C747956009B21BA /* Main.storyboard */; };
 		5DDA7E961C747956009B21BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DDA7E951C747956009B21BA /* Assets.xcassets */; };
 		5DDA7E991C747956009B21BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDA7E971C747956009B21BA /* LaunchScreen.storyboard */; };
+		CE1EC1AA1C831B1A00391E9F /* AirplainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1EC1A91C831B1A00391E9F /* AirplainManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		5DDA7E951C747956009B21BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DDA7E981C747956009B21BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DDA7E9A1C747956009B21BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE1EC1A81C831B1A00391E9F /* AirplainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirplainManager.h; sourceTree = "<group>"; };
+		CE1EC1A91C831B1A00391E9F /* AirplainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirplainManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				5D06B31E1C79711F00663BB9 /* Airline.m */,
 				5D06B31F1C79711F00663BB9 /* Fighter.h */,
 				5D06B3201C79711F00663BB9 /* Fighter.m */,
+				CE1EC1A81C831B1A00391E9F /* AirplainManager.h */,
+				CE1EC1A91C831B1A00391E9F /* AirplainManager.m */,
 				5DDA7E8C1C747956009B21BA /* AppDelegate.h */,
 				5DDA7E8D1C747956009B21BA /* AppDelegate.m */,
 				5DDA7E921C747956009B21BA /* Main.storyboard */,
@@ -214,6 +219,7 @@
 				5D06B3221C79711F00663BB9 /* Airline.m in Sources */,
 				5DDA7E8B1C747956009B21BA /* main.m in Sources */,
 				5D06B3211C79711F00663BB9 /* Aircraft.m in Sources */,
+				CE1EC1AA1C831B1A00391E9F /* AirplainManager.m in Sources */,
 				5DB71D441C7F29E0005C81E7 /* CheckAirplaneViewController.m in Sources */,
 				5D06B3231C79711F00663BB9 /* Fighter.m in Sources */,
 				5D06B3151C79688400663BB9 /* FighterTableViewController.m in Sources */,
