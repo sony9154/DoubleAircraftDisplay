@@ -32,12 +32,12 @@
 		5D06B3141C79688400663BB9 /* FighterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FighterTableViewController.m; sourceTree = "<group>"; };
 		5D06B3161C79692D00663BB9 /* Detail1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Detail1ViewController.h; sourceTree = "<group>"; };
 		5D06B3171C79692D00663BB9 /* Detail1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Detail1ViewController.m; sourceTree = "<group>"; };
-		5D06B31B1C79711F00663BB9 /* Aircraft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Aircraft.h; path = Library/Aircraft.h; sourceTree = "<group>"; };
-		5D06B31C1C79711F00663BB9 /* Aircraft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Aircraft.m; path = Library/Aircraft.m; sourceTree = "<group>"; };
-		5D06B31D1C79711F00663BB9 /* Airline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Airline.h; path = Library/Airline.h; sourceTree = "<group>"; };
-		5D06B31E1C79711F00663BB9 /* Airline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Airline.m; path = Library/Airline.m; sourceTree = "<group>"; };
-		5D06B31F1C79711F00663BB9 /* Fighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fighter.h; path = Library/Fighter.h; sourceTree = "<group>"; };
-		5D06B3201C79711F00663BB9 /* Fighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fighter.m; path = Library/Fighter.m; sourceTree = "<group>"; };
+		5D06B31B1C79711F00663BB9 /* Aircraft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aircraft.h; sourceTree = "<group>"; };
+		5D06B31C1C79711F00663BB9 /* Aircraft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aircraft.m; sourceTree = "<group>"; };
+		5D06B31D1C79711F00663BB9 /* Airline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Airline.h; sourceTree = "<group>"; };
+		5D06B31E1C79711F00663BB9 /* Airline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Airline.m; sourceTree = "<group>"; };
+		5D06B31F1C79711F00663BB9 /* Fighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fighter.h; sourceTree = "<group>"; };
+		5D06B3201C79711F00663BB9 /* Fighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fighter.m; sourceTree = "<group>"; };
 		5D0879B61C7C73EA00E12C8C /* MyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
 		5D0879B71C7C73EA00E12C8C /* MyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
 		5D51EB2C1C7B4D890090EC5C /* EntranceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntranceViewController.h; sourceTree = "<group>"; };
@@ -94,6 +94,30 @@
 		5DDA7E881C747956009B21BA /* DoubleAircraftDisplay */ = {
 			isa = PBXGroup;
 			children = (
+				CE1EC1AD1C832B3F00391E9F /* Controller */,
+				CE1EC1AB1C832B2400391E9F /* Model */,
+				5DDA7E8C1C747956009B21BA /* AppDelegate.h */,
+				5DDA7E8D1C747956009B21BA /* AppDelegate.m */,
+				5DDA7E921C747956009B21BA /* Main.storyboard */,
+				5DDA7E951C747956009B21BA /* Assets.xcassets */,
+				5DDA7E971C747956009B21BA /* LaunchScreen.storyboard */,
+				5DDA7E9A1C747956009B21BA /* Info.plist */,
+				5DDA7E891C747956009B21BA /* Supporting Files */,
+			);
+			path = DoubleAircraftDisplay;
+			sourceTree = "<group>";
+		};
+		5DDA7E891C747956009B21BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DDA7E8A1C747956009B21BA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE1EC1AB1C832B2400391E9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				5D06B31B1C79711F00663BB9 /* Aircraft.h */,
 				5D06B31C1C79711F00663BB9 /* Aircraft.m */,
 				5D06B31D1C79711F00663BB9 /* Airline.h */,
@@ -102,9 +126,14 @@
 				5D06B3201C79711F00663BB9 /* Fighter.m */,
 				CE1EC1A81C831B1A00391E9F /* AirplainManager.h */,
 				CE1EC1A91C831B1A00391E9F /* AirplainManager.m */,
-				5DDA7E8C1C747956009B21BA /* AppDelegate.h */,
-				5DDA7E8D1C747956009B21BA /* AppDelegate.m */,
-				5DDA7E921C747956009B21BA /* Main.storyboard */,
+			);
+			name = Model;
+			path = Library;
+			sourceTree = "<group>";
+		};
+		CE1EC1AD1C832B3F00391E9F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				5D51EB2C1C7B4D890090EC5C /* EntranceViewController.h */,
 				5D51EB2D1C7B4D890090EC5C /* EntranceViewController.m */,
 				5D0879B61C7C73EA00E12C8C /* MyNavigationController.h */,
@@ -123,20 +152,8 @@
 				5DB71D461C7F2C70005C81E7 /* AirplaneTableViewController.m */,
 				5DB71D481C7F2CC7005C81E7 /* Detail2ViewController.h */,
 				5DB71D491C7F2CC7005C81E7 /* Detail2ViewController.m */,
-				5DDA7E951C747956009B21BA /* Assets.xcassets */,
-				5DDA7E971C747956009B21BA /* LaunchScreen.storyboard */,
-				5DDA7E9A1C747956009B21BA /* Info.plist */,
-				5DDA7E891C747956009B21BA /* Supporting Files */,
 			);
-			path = DoubleAircraftDisplay;
-			sourceTree = "<group>";
-		};
-		5DDA7E891C747956009B21BA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5DDA7E8A1C747956009B21BA /* main.m */,
-			);
-			name = "Supporting Files";
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
