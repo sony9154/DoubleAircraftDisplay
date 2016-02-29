@@ -11,7 +11,5 @@
 
 @interface CheckFighterViewController : UIViewController
 
-@property (nonatomic,strong) NSMutableArray * fightersArray;
-
 @end
 

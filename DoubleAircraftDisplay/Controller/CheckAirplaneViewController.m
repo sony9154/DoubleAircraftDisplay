@@ -1,30 +1,38 @@
 //
-//  MyNavigationController.m
+//  CheckAirplaneViewController.m
 //  DoubleAircraftDisplay
 //
-//  Created by Peter Yo on 2月/23/16.
+//  Created by Peter Yo on 2月/25/16.
 //  Copyright © 2016年 Song-Yo Hsu. All rights reserved.
 //
 
-#import "MyNavigationController.h"
-#import "CheckFighterViewController.h"
+#import "CheckAirplaneViewController.h"
+#import "AirplainManager.h"
 
-@interface MyNavigationController ()
-
+@interface CheckAirplaneViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *totalAirplaneLabel;
 @end
 
-@implementation MyNavigationController
+@implementation CheckAirplaneViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    AirplainManager *airplainManager = [AirplainManager sharedInstance];
+    self.totalAirplaneLabel.text = [NSString stringWithFormat:@"目前有%li架客機", airplainManager.airlines.count];
+}
+
+- (IBAction)goBackButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 

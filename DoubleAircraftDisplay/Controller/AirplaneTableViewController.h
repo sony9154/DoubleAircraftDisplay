@@ -1,5 +1,5 @@
 //
-//  MyNavigationController-2.h
+//  AirplaneTableViewController.h
 //  DoubleAircraftDisplay
 //
 //  Created by Peter Yo on 2月/25/16.
@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyNavigationController_2 : UINavigationController
-@property (nonatomic,strong) NSMutableArray * airplanesArray;
+@interface AirplaneTableViewController : UITableViewController
 @end

@@ -10,8 +10,4 @@
 #import "Detail1ViewController.h"
 
 @interface FighterTableViewController : UITableViewController
-
-
-@property (nonatomic,strong) NSMutableArray * fightersArray;
-
 @end

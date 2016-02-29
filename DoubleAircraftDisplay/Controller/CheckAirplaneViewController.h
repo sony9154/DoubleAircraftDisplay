@@ -1,5 +1,5 @@
 //
-//  AirplaneTableViewController.h
+//  CheckAirplaneViewController.h
 //  DoubleAircraftDisplay
 //
 //  Created by Peter Yo on 2月/25/16.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CheckAirplaneViewController.h"
 
-@interface AirplaneTableViewController : UITableViewController
-@property (nonatomic,strong) NSMutableArray * airplanesArray;
-
+@interface CheckAirplaneViewController : UIViewController
 @end

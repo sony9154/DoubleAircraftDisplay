@@ -1,43 +1,36 @@
 //
-//  FighterTableViewController.m
+//  AirplaneTableViewController.m
 //  DoubleAircraftDisplay
 //
-//  Created by Peter Yo on 2月/21/16.
+//  Created by Peter Yo on 2月/25/16.
 //  Copyright © 2016年 Song-Yo Hsu. All rights reserved.
 //
 
-#import "FighterTableViewController.h"
-#import "Detail1ViewController.h"
-#import "Fighter.h"
-#import "CheckFighterViewController.h"
+#import "AirplaneTableViewController.h"
+#import "Airline.h"
+#import "Detail2ViewController.h"
+#import "CheckAirplaneViewController.h"
+#import "AirplainManager.h"
 
-@interface FighterTableViewController ()
-
-
+@interface AirplaneTableViewController ()
+@property (nonatomic) NSMutableArray<Airline *> *airlines;
 @end
 
-@implementation FighterTableViewController
+@implementation AirplaneTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //self.fightersArray = [[NSMutableArray alloc] init];
-    
-//    for (int i=0; i<5; i++) {
-//        NSString * planeName = [NSString stringWithFormat: @"海燕%i號" , i];
-//        Fighter * fighter = [[Fighter alloc]init];
-//        [fighter setCodename:planeName];
-//        [self.fightersArray addObject:fighter];
-//    }
-    //NSLog(@"目前有%li架戰機",self.fightersArray.count);
-
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateTableView) name:@"updateTableView" object:nil];
-    
-    
+
     self.tableView.delegate = self;
+    AirplainManager *airplainManager = [AirplainManager sharedInstance];
+    self.airlines = airplainManager.airlines;
+
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
 }
 
 -(void)updateTableView {
@@ -56,25 +49,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.fightersArray.count;
+    return self.airlines.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    Fighter * fighter = [self.fightersArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = [fighter tellMeCodename];
-    cell.detailTextLabel.text = [fighter pilotName];
+    Airline * airline = [self.airlines objectAtIndex:indexPath.row];
+    cell.textLabel.text = [airline tellMeCodename];
+    cell.detailTextLabel.text = [airline pilotName];
     return cell;
-    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    Fighter * fighter = [self.fightersArray objectAtIndex:indexPath.row];
-    Detail1ViewController * detail1VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Detail1ViewController"];
-    detail1VC.fighter = fighter; //這裡的 detail1VC.fighter是跑到Detail1ViewController.h的第15行的*fighter去了嗎？
-    [self.navigationController pushViewController:detail1VC animated:YES];
+    Airline * airline = [self.airlines objectAtIndex:indexPath.row];
+    Detail2ViewController * detail2VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Detail2ViewController"];
+    detail2VC.airline = airline;
+    [self.navigationController pushViewController:detail2VC animated:YES];
 }
 
 - (IBAction)insertPlane:(id)sender {
@@ -91,12 +82,12 @@
         NSString * codeName = [[alertController textFields] firstObject].text;
         NSString * pilotName = [[alertController textFields] lastObject].text;
         
-        Fighter * fighter = [[Fighter alloc]init];
-        [fighter setCodename:codeName];
-        [fighter setPilotName:pilotName];
-        [self.fightersArray addObject:fighter];
+        Airline * airplane = [[Airline alloc]init];
+        [airplane setCodename:codeName];
+        [airplane setPilotName:pilotName];
+        [self.airlines addObject:airplane];
         [self.tableView reloadData];
-        NSLog(@"目前有%li架戰機",self.fightersArray.count);
+        NSLog(@"目前有%li架客機",self.airlines.count);
     }];
     
     
